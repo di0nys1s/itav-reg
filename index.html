@@ -14,8 +14,10 @@
         <link rel="stylesheet" href="styles.css">
     </head>
     <body>
-        
         <div class="form-container">
+            <h3 class="ui center aligned block header">
+                Create a Village
+            </h3>
             <form class="ui form segment error">
                 <h4 class="ui dividing header">Your Details</h4>
                 <div class="field">
@@ -32,15 +34,12 @@
 
                 <div class="field">
                     <label>Contact*</label>
-                    <div class="three fields">
+                    <div class="two fields">
                         <div class="field">
                             <input type="text" name="donatorEmail" placeholder="Donator Email">
                         </div>
                         <div class="field">
                             <input type="text" name="donatorMobile" placeholder="Donator Mobile Phone">
-                        </div>
-                        <div class="field">
-                            <input type="text" name="donatorPostcode" placeholder="Donator Post Code">
                         </div>
                     </div>
                 </div>
@@ -291,23 +290,22 @@
                             <option class="item" data-value="zw"><i class="zw flag"></i>Zimbabwe</option>
                         </select>
                     </div>
+                    <div class="field">
+                        <input type="text" name="donatorPostcode" placeholder="Donator Post Code">
+                    </div>
                 </div>
                 
                 <h4 class="ui dividing header">Recipient Details</h4>
-                <div class="field">
-                    <label>Name*</label>
-                    <div class="two fields">
+                <div class="ui stackable two column grid">
+                    <div class="column">
+                        <label><strong>Name*</strong></label>
                         <div class="field">
                             <input type="text" name="recipientFirstName" placeholder="Recipient First Name">
                         </div>
                         <div class="field">
                             <input type="text" name="recipientLastName" placeholder="Recipient Last Name">
                         </div>
-                    </div>
-                </div>
-                <div class="field">
-                    <label>Contact*</label>
-                    <div class="two fields">
+                        <label><strong>Contact*</strong></label>
                         <div class="field">
                             <input type="text" name="recipientEmail" placeholder="Recipient Email">
                         </div>
@@ -317,11 +315,24 @@
                             </div>
                         </div>
                     </div>
+                    <div class="column center aligned">
+                        <label>Image</label>
+                        <div class="field image-preview">
+                            <img id="uploaded-image" src="http://placehold.it/180" alt="your image" />  
+                        </div>
+                        <div class="field btn-upload">
+                            <input type="file" (change)="fileEvent($event)" class="inputfile" id="imgInp" />
+                            <label style="max-width: 175px;" id="btn-upload-image" for="imgInp" class="ui yellow inverted button">
+                                <i class="ui upload icon"></i>
+                                Upload image
+                            </label>
+                        </div>
+                    </div>
                 </div>
 
                 <h4 class="ui dividing header">Donation Details</h4>
-                <div class="field">
-                    <div class="three fields">
+                <div class="ui stackable two column grid">
+                    <div class="column">
                         <div class="field">
                             <label>Amount*</label>
                             <input type="number" name="donationAmount" placeholder="Amount">
@@ -334,10 +345,8 @@
                             <label>CVC*</label>
                             <input type="text" name="cardCVC" maxlength="3" placeholder="CVC">
                         </div>
-                    </div>
-                    <div class="field">
-                        <label>Expiration*</label>
-                        <div class="two fields">
+                        <div class="field">
+                            <label>Expiration*</label>
                             <div class="field">
                                 <select class="ui fluid search dropdown" name="cardExpireMonth">
                                     <option value="">Month</option>
@@ -360,10 +369,9 @@
                             </div>
                         </div>
                     </div>
-                </div>
-                <div class="ui stackable two column grid">
                     <div class="column">
-                        <div class="ui stacked segment">
+                        <div class="ui center aligned stacked segment">
+                            <label><strong>Payment Summary</strong></label>
                             <table class="ui celled striped table">
                                 <thead>
                                     <tr>
@@ -386,8 +394,6 @@
                                 </tbody>
                             </table>
                         </div>
-                    </div>
-                    <div class="column">
                         <div class="inline field">
                             <div class="ui toggle checkbox">
                                 <input type="checkbox" tabindex="0" class="hidden">
@@ -396,31 +402,50 @@
                         </div>
                     </div>
                 </div>
-                
+
                 <h4 class="ui dividing header">Well Wishes</h4>
                 <div class="field">
                     <div class="field">
-                        <input type="text" name="wishes[well-wishes]" placeholder="Please type your wishes...">
+                        <input type="text" name="wellWishes" placeholder="Please type your wishes...">
                     </div>
                 </div>
                 
-                <div class="inline field">
-                    <div class="ui toggle checkbox">
-                        <input type="checkbox" tabindex="0" class="hidden">
-                        <label>Manually send email later</label>
+                <div class="two fields">
+                    <div class="field">
+                        <div class="ui form">
+                            <div class="grouped fields">
+                                <div class="field">
+                                    <div class="ui radio checkbox" id="check-auto">
+                                        <input type="radio" name="example2">
+                                        <label>Autosend email now</label>
+                                    </div>
+                                </div>
+                                <div class="field">
+                                    <div class="ui radio checkbox" id="check-manual">
+                                        <input type="radio" name="example2">
+                                        <label>Manually send email later</label>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
                     </div>
+                    <div class="field ui right aligned container pay-container">
+                        <div class="ui massive yellow submit inverted button" id="btn-pay">Pay Now</div>
+                    </div>
+                    
+                    
                 </div>
-                <div class="inline field">
+                <!-- <div class="inline field">
                     <div class="ui checkbox">
                         <input type="checkbox" name="terms" tabindex="0" class="hidden">
                         <label>I agree to the terms and conditions</label>
                     </div>
-                </div>
-                <div class="ui primary submit button">Pay Now</div>
+                </div> -->
+                
                 <div class="ui error message">
                     <ul class="list">
                         <li>*Please fill all the required field before submitting the form</li>
-                        <li>You must agree to the terms and conditions</li>
+                        <!-- <li>You must agree to the terms and conditions</li> -->
                     </ul>
                 </div>
             </form>
