@@ -9,451 +9,481 @@
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
             integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.4.1/semantic.min.css">    
-        
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/flickity/2.2.1/flickity.min.css">
         
         <link rel="stylesheet" href="styles.css">
     </head>
     <body>
-        <div class="form-container">
-            <h3 class="ui center aligned block header">
-                Create a Village
-            </h3>
-            <form class="ui form segment error">
-                <h4 class="ui dividing header">Your Details</h4>
-                <div class="field">
-                    <label>Name*</label>
-                    <div class="two fields">
-                        <div class="field">
-                            <input type="text" name="donatorFirstName" placeholder="Donator First Name">
-                        </div>
-                        <div class="field">
-                            <input type="text" name="donatorLastName" placeholder="Donator Last Name">
-                        </div>
-                    </div>
-                </div>
 
-                <div class="field">
-                    <label>Contact*</label>
-                    <div class="two fields">
+
+            <h1 id="page-header" class="ui center aligned header">
+                Create a Village
+            </h1>
+            <div class="form-container">
+                <form id="form-inner" class="ui form segment error">
+                    <fieldset class="fieldset">
+                        <legend class="legend">Your Details</legend>
                         <div class="field">
-                            <input type="text" name="donatorEmail" placeholder="Donator Email">
-                        </div>
-                        <div class="field">
-                            <input type="text" name="donatorMobile" placeholder="Donator Mobile Phone">
-                        </div>
-                    </div>
-                </div>
-                <div class="two fields">
-                    <div class="field">
-                        <select class="ui fluid search selection dropdown" name="donatorCountry">
-                            <option value="">Select Country</option>
-                            <option class="item" data-value="ax"><i class="ax flag"></i>Aland Islands</option>
-                            <option class="item" data-value="al"><i class="al flag"></i>Albania</option>
-                            <option class="item" data-value="dz"><i class="dz flag"></i>Algeria</option>
-                            <option class="item" data-value="as"><i class="as flag"></i>American Samoa</option>
-                            <option class="item" data-value="ad"><i class="ad flag"></i>Andorra</option>
-                            <option class="item" data-value="ao"><i class="ao flag"></i>Angola</option>
-                            <option class="item" data-value="ai"><i class="ai flag"></i>Anguilla</option>
-                            <option class="item" data-value="ag"><i class="ag flag"></i>Antigua</option>
-                            <option class="item" data-value="ar"><i class="ar flag"></i>Argentina</option>
-                            <option class="item" data-value="am"><i class="am flag"></i>Armenia</option>
-                            <option class="item" data-value="aw"><i class="aw flag"></i>Aruba</option>
-                            <option class="item" data-value="au"><i class="au flag"></i>Australia</option>
-                            <option class="item" data-value="at"><i class="at flag"></i>Austria</option>
-                            <option class="item" data-value="az"><i class="az flag"></i>Azerbaijan</option>
-                            <option class="item" data-value="bs"><i class="bs flag"></i>Bahamas</option>
-                            <option class="item" data-value="bh"><i class="bh flag"></i>Bahrain</option>
-                            <option class="item" data-value="bd"><i class="bd flag"></i>Bangladesh</option>
-                            <option class="item" data-value="bb"><i class="bb flag"></i>Barbados</option>
-                            <option class="item" data-value="by"><i class="by flag"></i>Belarus</option>
-                            <option class="item" data-value="be"><i class="be flag"></i>Belgium</option>
-                            <option class="item" data-value="bz"><i class="bz flag"></i>Belize</option>
-                            <option class="item" data-value="bj"><i class="bj flag"></i>Benin</option>
-                            <option class="item" data-value="bm"><i class="bm flag"></i>Bermuda</option>
-                            <option class="item" data-value="bt"><i class="bt flag"></i>Bhutan</option>
-                            <option class="item" data-value="bo"><i class="bo flag"></i>Bolivia</option>
-                            <option class="item" data-value="ba"><i class="ba flag"></i>Bosnia</option>
-                            <option class="item" data-value="bw"><i class="bw flag"></i>Botswana</option>
-                            <option class="item" data-value="bv"><i class="bv flag"></i>Bouvet Island</option>
-                            <option class="item" data-value="br"><i class="br flag"></i>Brazil</option>
-                            <option class="item" data-value="vg"><i class="vg flag"></i>British Virgin Islands</option>
-                            <option class="item" data-value="bn"><i class="bn flag"></i>Brunei</option>
-                            <option class="item" data-value="bg"><i class="bg flag"></i>Bulgaria</option>
-                            <option class="item" data-value="bf"><i class="bf flag"></i>Burkina Faso</option>
-                            <option class="item" data-value="mm"><i class="mm flag"></i>Burma</option>
-                            <option class="item" data-value="bi"><i class="bi flag"></i>Burundi</option>
-                            <option class="item" data-value="tc"><i class="tc flag"></i>Caicos Islands</option>
-                            <option class="item" data-value="kh"><i class="kh flag"></i>Cambodia</option>
-                            <option class="item" data-value="cm"><i class="cm flag"></i>Cameroon</option>
-                            <option class="item" data-value="ca"><i class="ca flag"></i>Canada</option>
-                            <option class="item" data-value="cv"><i class="cv flag"></i>Cape Verde</option>
-                            <option class="item" data-value="ky"><i class="ky flag"></i>Cayman Islands</option>
-                            <option class="item" data-value="cf"><i class="cf flag"></i>Central African Republic</option>
-                            <option class="item" data-value="td"><i class="td flag"></i>Chad</option>
-                            <option class="item" data-value="cl"><i class="cl flag"></i>Chile</option>
-                            <option class="item" data-value="cn"><i class="cn flag"></i>China</option>
-                            <option class="item" data-value="cx"><i class="cx flag"></i>Christmas Island</option>
-                            <option class="item" data-value="cc"><i class="cc flag"></i>Cocos Islands</option>
-                            <option class="item" data-value="co"><i class="co flag"></i>Colombia</option>
-                            <option class="item" data-value="km"><i class="km flag"></i>Comoros</option>
-                            <option class="item" data-value="cg"><i class="cg flag"></i>Congo Brazzaville</option>
-                            <option class="item" data-value="cd"><i class="cd flag"></i>Congo</option>
-                            <option class="item" data-value="ck"><i class="ck flag"></i>Cook Islands</option>
-                            <option class="item" data-value="cr"><i class="cr flag"></i>Costa Rica</option>
-                            <option class="item" data-value="ci"><i class="ci flag"></i>Cote Divoire</option>
-                            <option class="item" data-value="hr"><i class="hr flag"></i>Croatia</option>
-                            <option class="item" data-value="cu"><i class="cu flag"></i>Cuba</option>
-                            <option class="item" data-value="cy"><i class="cy flag"></i>Cyprus</option>
-                            <option class="item" data-value="cz"><i class="cz flag"></i>Czech Republic</option>
-                            <option class="item" data-value="dk"><i class="dk flag"></i>Denmark</option>
-                            <option class="item" data-value="dj"><i class="dj flag"></i>Djibouti</option>
-                            <option class="item" data-value="dm"><i class="dm flag"></i>Dominica</option>
-                            <option class="item" data-value="do"><i class="do flag"></i>Dominican Republic</option>
-                            <option class="item" data-value="ec"><i class="ec flag"></i>Ecuador</option>
-                            <option class="item" data-value="eg"><i class="eg flag"></i>Egypt</option>
-                            <option class="item" data-value="sv"><i class="sv flag"></i>El Salvador</option>
-                            <option class="item" data-value="gb"><i class="gb flag"></i>England</option>
-                            <option class="item" data-value="gq"><i class="gq flag"></i>Equatorial Guinea</option>
-                            <option class="item" data-value="er"><i class="er flag"></i>Eritrea</option>
-                            <option class="item" data-value="ee"><i class="ee flag"></i>Estonia</option>
-                            <option class="item" data-value="et"><i class="et flag"></i>Ethiopia</option>
-                            <option class="item" data-value="eu"><i class="eu flag"></i>European Union</option>
-                            <option class="item" data-value="fk"><i class="fk flag"></i>Falkland Islands</option>
-                            <option class="item" data-value="fo"><i class="fo flag"></i>Faroe Islands</option>
-                            <option class="item" data-value="fj"><i class="fj flag"></i>Fiji</option>
-                            <option class="item" data-value="fi"><i class="fi flag"></i>Finland</option>
-                            <option class="item" data-value="fr"><i class="fr flag"></i>France</option>
-                            <option class="item" data-value="gf"><i class="gf flag"></i>French Guiana</option>
-                            <option class="item" data-value="pf"><i class="pf flag"></i>French Polynesia</option>
-                            <option class="item" data-value="tf"><i class="tf flag"></i>French Territories</option>
-                            <option class="item" data-value="ga"><i class="ga flag"></i>Gabon</option>
-                            <option class="item" data-value="gm"><i class="gm flag"></i>Gambia</option>
-                            <option class="item" data-value="ge"><i class="ge flag"></i>Georgia</option>
-                            <option class="item" data-value="de"><i class="de flag"></i>Germany</option>
-                            <option class="item" data-value="gh"><i class="gh flag"></i>Ghana</option>
-                            <option class="item" data-value="gi"><i class="gi flag"></i>Gibraltar</option>
-                            <option class="item" data-value="gr"><i class="gr flag"></i>Greece</option>
-                            <option class="item" data-value="gl"><i class="gl flag"></i>Greenland</option>
-                            <option class="item" data-value="gd"><i class="gd flag"></i>Grenada</option>
-                            <option class="item" data-value="gp"><i class="gp flag"></i>Guadeloupe</option>
-                            <option class="item" data-value="gu"><i class="gu flag"></i>Guam</option>
-                            <option class="item" data-value="gt"><i class="gt flag"></i>Guatemala</option>
-                            <option class="item" data-value="gw"><i class="gw flag"></i>Guinea-Bissau</option>
-                            <option class="item" data-value="gn"><i class="gn flag"></i>Guinea</option>
-                            <option class="item" data-value="gy"><i class="gy flag"></i>Guyana</option>
-                            <option class="item" data-value="ht"><i class="ht flag"></i>Haiti</option>
-                            <option class="item" data-value="hm"><i class="hm flag"></i>Heard Island</option>
-                            <option class="item" data-value="hn"><i class="hn flag"></i>Honduras</option>
-                            <option class="item" data-value="hk"><i class="hk flag"></i>Hong Kong</option>
-                            <option class="item" data-value="hu"><i class="hu flag"></i>Hungary</option>
-                            <option class="item" data-value="is"><i class="is flag"></i>Iceland</option>
-                            <option class="item" data-value="in"><i class="in flag"></i>India</option>
-                            <option class="item" data-value="io"><i class="io flag"></i>Indian Ocean Territory</option>
-                            <option class="item" data-value="id"><i class="id flag"></i>Indonesia</option>
-                            <option class="item" data-value="ir"><i class="ir flag"></i>Iran</option>
-                            <option class="item" data-value="iq"><i class="iq flag"></i>Iraq</option>
-                            <option class="item" data-value="ie"><i class="ie flag"></i>Ireland</option>
-                            <option class="item" data-value="il"><i class="il flag"></i>Israel</option>
-                            <option class="item" data-value="it"><i class="it flag"></i>Italy</option>
-                            <option class="item" data-value="jm"><i class="jm flag"></i>Jamaica</option>
-                            <option class="item" data-value="jp"><i class="jp flag"></i>Japan</option>
-                            <option class="item" data-value="jo"><i class="jo flag"></i>Jordan</option>
-                            <option class="item" data-value="kz"><i class="kz flag"></i>Kazakhstan</option>
-                            <option class="item" data-value="ke"><i class="ke flag"></i>Kenya</option>
-                            <option class="item" data-value="ki"><i class="ki flag"></i>Kiribati</option>
-                            <option class="item" data-value="kw"><i class="kw flag"></i>Kuwait</option>
-                            <option class="item" data-value="kg"><i class="kg flag"></i>Kyrgyzstan</option>
-                            <option class="item" data-value="la"><i class="la flag"></i>Laos</option>
-                            <option class="item" data-value="lv"><i class="lv flag"></i>Latvia</option>
-                            <option class="item" data-value="lb"><i class="lb flag"></i>Lebanon</option>
-                            <option class="item" data-value="ls"><i class="ls flag"></i>Lesotho</option>
-                            <option class="item" data-value="lr"><i class="lr flag"></i>Liberia</option>
-                            <option class="item" data-value="ly"><i class="ly flag"></i>Libya</option>
-                            <option class="item" data-value="li"><i class="li flag"></i>Liechtenstein</option>
-                            <option class="item" data-value="lt"><i class="lt flag"></i>Lithuania</option>
-                            <option class="item" data-value="lu"><i class="lu flag"></i>Luxembourg</option>
-                            <option class="item" data-value="mo"><i class="mo flag"></i>Macau</option>
-                            <option class="item" data-value="mk"><i class="mk flag"></i>Macedonia</option>
-                            <option class="item" data-value="mg"><i class="mg flag"></i>Madagascar</option>
-                            <option class="item" data-value="mw"><i class="mw flag"></i>Malawi</option>
-                            <option class="item" data-value="my"><i class="my flag"></i>Malaysia</option>
-                            <option class="item" data-value="mv"><i class="mv flag"></i>Maloptiones</option>
-                            <option class="item" data-value="ml"><i class="ml flag"></i>Mali</option>
-                            <option class="item" data-value="mt"><i class="mt flag"></i>Malta</option>
-                            <option class="item" data-value="mh"><i class="mh flag"></i>Marshall Islands</option>
-                            <option class="item" data-value="mq"><i class="mq flag"></i>Martinique</option>
-                            <option class="item" data-value="mr"><i class="mr flag"></i>Mauritania</option>
-                            <option class="item" data-value="mu"><i class="mu flag"></i>Mauritius</option>
-                            <option class="item" data-value="yt"><i class="yt flag"></i>Mayotte</option>
-                            <option class="item" data-value="mx"><i class="mx flag"></i>Mexico</option>
-                            <option class="item" data-value="fm"><i class="fm flag"></i>Micronesia</option>
-                            <option class="item" data-value="md"><i class="md flag"></i>Moldova</option>
-                            <option class="item" data-value="mc"><i class="mc flag"></i>Monaco</option>
-                            <option class="item" data-value="mn"><i class="mn flag"></i>Mongolia</option>
-                            <option class="item" data-value="me"><i class="me flag"></i>Montenegro</option>
-                            <option class="item" data-value="ms"><i class="ms flag"></i>Montserrat</option>
-                            <option class="item" data-value="ma"><i class="ma flag"></i>Morocco</option>
-                            <option class="item" data-value="mz"><i class="mz flag"></i>Mozambique</option>
-                            <option class="item" data-value="na"><i class="na flag"></i>Namibia</option>
-                            <option class="item" data-value="nr"><i class="nr flag"></i>Nauru</option>
-                            <option class="item" data-value="np"><i class="np flag"></i>Nepal</option>
-                            <option class="item" data-value="an"><i class="an flag"></i>Netherlands Antilles</option>
-                            <option class="item" data-value="nl"><i class="nl flag"></i>Netherlands</option>
-                            <option class="item" data-value="nc"><i class="nc flag"></i>New Caledonia</option>
-                            <option class="item" data-value="pg"><i class="pg flag"></i>New Guinea</option>
-                            <option class="item" data-value="nz"><i class="nz flag"></i>New Zealand</option>
-                            <option class="item" data-value="ni"><i class="ni flag"></i>Nicaragua</option>
-                            <option class="item" data-value="ne"><i class="ne flag"></i>Niger</option>
-                            <option class="item" data-value="ng"><i class="ng flag"></i>Nigeria</option>
-                            <option class="item" data-value="nu"><i class="nu flag"></i>Niue</option>
-                            <option class="item" data-value="nf"><i class="nf flag"></i>Norfolk Island</option>
-                            <option class="item" data-value="kp"><i class="kp flag"></i>North Korea</option>
-                            <option class="item" data-value="mp"><i class="mp flag"></i>Northern Mariana Islands</option>
-                            <option class="item" data-value="no"><i class="no flag"></i>Norway</option>
-                            <option class="item" data-value="om"><i class="om flag"></i>Oman</option>
-                            <option class="item" data-value="pk"><i class="pk flag"></i>Pakistan</option>
-                            <option class="item" data-value="pw"><i class="pw flag"></i>Palau</option>
-                            <option class="item" data-value="ps"><i class="ps flag"></i>Palestine</option>
-                            <option class="item" data-value="pa"><i class="pa flag"></i>Panama</option>
-                            <option class="item" data-value="py"><i class="py flag"></i>Paraguay</option>
-                            <option class="item" data-value="pe"><i class="pe flag"></i>Peru</option>
-                            <option class="item" data-value="ph"><i class="ph flag"></i>Philippines</option>
-                            <option class="item" data-value="pn"><i class="pn flag"></i>Pitcairn Islands</option>
-                            <option class="item" data-value="pl"><i class="pl flag"></i>Poland</option>
-                            <option class="item" data-value="pt"><i class="pt flag"></i>Portugal</option>
-                            <option class="item" data-value="pr"><i class="pr flag"></i>Puerto Rico</option>
-                            <option class="item" data-value="qa"><i class="qa flag"></i>Qatar</option>
-                            <option class="item" data-value="re"><i class="re flag"></i>Reunion</option>
-                            <option class="item" data-value="ro"><i class="ro flag"></i>Romania</option>
-                            <option class="item" data-value="ru"><i class="ru flag"></i>Russia</option>
-                            <option class="item" data-value="rw"><i class="rw flag"></i>Rwanda</option>
-                            <option class="item" data-value="sh"><i class="sh flag"></i>Saint Helena</option>
-                            <option class="item" data-value="kn"><i class="kn flag"></i>Saint Kitts and Nevis</option>
-                            <option class="item" data-value="lc"><i class="lc flag"></i>Saint Lucia</option>
-                            <option class="item" data-value="pm"><i class="pm flag"></i>Saint Pierre</option>
-                            <option class="item" data-value="vc"><i class="vc flag"></i>Saint Vincent</option>
-                            <option class="item" data-value="ws"><i class="ws flag"></i>Samoa</option>
-                            <option class="item" data-value="sm"><i class="sm flag"></i>San Marino</option>
-                            <option class="item" data-value="gs"><i class="gs flag"></i>Sandwich Islands</option>
-                            <option class="item" data-value="st"><i class="st flag"></i>Sao Tome</option>
-                            <option class="item" data-value="sa"><i class="sa flag"></i>Saudi Arabia</option>
-                            <option class="item" data-value="sn"><i class="sn flag"></i>Senegal</option>
-                            <option class="item" data-value="cs"><i class="cs flag"></i>Serbia</option>
-                            <option class="item" data-value="rs"><i class="rs flag"></i>Serbia</option>
-                            <option class="item" data-value="sc"><i class="sc flag"></i>Seychelles</option>
-                            <option class="item" data-value="sl"><i class="sl flag"></i>Sierra Leone</option>
-                            <option class="item" data-value="sg"><i class="sg flag"></i>Singapore</option>
-                            <option class="item" data-value="sk"><i class="sk flag"></i>Slovakia</option>
-                            <option class="item" data-value="si"><i class="si flag"></i>Slovenia</option>
-                            <option class="item" data-value="sb"><i class="sb flag"></i>Solomon Islands</option>
-                            <option class="item" data-value="so"><i class="so flag"></i>Somalia</option>
-                            <option class="item" data-value="za"><i class="za flag"></i>South Africa</option>
-                            <option class="item" data-value="kr"><i class="kr flag"></i>South Korea</option>
-                            <option class="item" data-value="es"><i class="es flag"></i>Spain</option>
-                            <option class="item" data-value="lk"><i class="lk flag"></i>Sri Lanka</option>
-                            <option class="item" data-value="sd"><i class="sd flag"></i>Sudan</option>
-                            <option class="item" data-value="sr"><i class="sr flag"></i>Suriname</option>
-                            <option class="item" data-value="sj"><i class="sj flag"></i>Svalbard</option>
-                            <option class="item" data-value="sz"><i class="sz flag"></i>Swaziland</option>
-                            <option class="item" data-value="se"><i class="se flag"></i>Sweden</option>
-                            <option class="item" data-value="ch"><i class="ch flag"></i>Switzerland</option>
-                            <option class="item" data-value="sy"><i class="sy flag"></i>Syria</option>
-                            <option class="item" data-value="tw"><i class="tw flag"></i>Taiwan</option>
-                            <option class="item" data-value="tj"><i class="tj flag"></i>Tajikistan</option>
-                            <option class="item" data-value="tz"><i class="tz flag"></i>Tanzania</option>
-                            <option class="item" data-value="th"><i class="th flag"></i>Thailand</option>
-                            <option class="item" data-value="tl"><i class="tl flag"></i>Timorleste</option>
-                            <option class="item" data-value="tg"><i class="tg flag"></i>Togo</option>
-                            <option class="item" data-value="tk"><i class="tk flag"></i>Tokelau</option>
-                            <option class="item" data-value="to"><i class="to flag"></i>Tonga</option>
-                            <option class="item" data-value="tt"><i class="tt flag"></i>Trinidad</option>
-                            <option class="item" data-value="tn"><i class="tn flag"></i>Tunisia</option>
-                            <option class="item" data-value="tr"><i class="tr flag"></i>Turkey</option>
-                            <option class="item" data-value="tm"><i class="tm flag"></i>Turkmenistan</option>
-                            <option class="item" data-value="tv"><i class="tv flag"></i>Tuvalu</option>
-                            <option class="item" data-value="ug"><i class="ug flag"></i>Uganda</option>
-                            <option class="item" data-value="ua"><i class="ua flag"></i>Ukraine</option>
-                            <option class="item" data-value="ae"><i class="ae flag"></i>United Arab Emirates</option>
-                            <option class="item" data-value="us"><i class="us flag"></i>United States</option>
-                            <option class="item" data-value="uy"><i class="uy flag"></i>Uruguay</option>
-                            <option class="item" data-value="um"><i class="um flag"></i>Us Minor Islands</option>
-                            <option class="item" data-value="vi"><i class="vi flag"></i>Us Virgin Islands</option>
-                            <option class="item" data-value="uz"><i class="uz flag"></i>Uzbekistan</option>
-                            <option class="item" data-value="vu"><i class="vu flag"></i>Vanuatu</option>
-                            <option class="item" data-value="va"><i class="va flag"></i>Vatican City</option>
-                            <option class="item" data-value="ve"><i class="ve flag"></i>Venezuela</option>
-                            <option class="item" data-value="vn"><i class="vn flag"></i>Vietnam</option>
-                            <option class="item" data-value="wf"><i class="wf flag"></i>Wallis and Futuna</option>
-                            <option class="item" data-value="eh"><i class="eh flag"></i>Western Sahara</option>
-                            <option class="item" data-value="ye"><i class="ye flag"></i>Yemen</option>
-                            <option class="item" data-value="zm"><i class="zm flag"></i>Zambia</option>
-                            <option class="item" data-value="zw"><i class="zw flag"></i>Zimbabwe</option>
-                        </select>
-                    </div>
-                    <div class="field">
-                        <input type="text" name="donatorPostcode" placeholder="Donator Post Code">
-                    </div>
-                </div>
-                
-                <h4 class="ui dividing header">Recipient Details</h4>
-                <div class="ui stackable two column grid">
-                    <div class="column">
-                        <label><strong>Name*</strong></label>
-                        <div class="field">
-                            <input type="text" name="recipientFirstName" placeholder="Recipient First Name">
-                        </div>
-                        <div class="field">
-                            <input type="text" name="recipientLastName" placeholder="Recipient Last Name">
-                        </div>
-                        <label><strong>Contact*</strong></label>
-                        <div class="field">
-                            <input type="text" name="recipientEmail" placeholder="Recipient Email">
-                        </div>
-                        <div class="field">
-                            <div class="ui disabled input">
-                                <input type="text" name="recipientPostcode" placeholder="Post Code" value="3055">
+                            <label class="section-header-label">Name*</label>
+                            <div class="two fields">
+                                <div class="field">
+                                    <input type="text" name="donatorFirstName" placeholder="Donator First Name">
+                                </div>
+                                <div class="field">
+                                    <input type="text" name="donatorLastName" placeholder="Donator Last Name">
+                                </div>
                             </div>
                         </div>
-                    </div>
-                    <div class="column center aligned">
-                        <label>Image</label>
-                        <div class="field image-preview">
-                            <img id="uploaded-image" src="http://placehold.it/180" alt="your image" />  
-                        </div>
-                        <div class="field btn-upload">
-                            <input type="file" (change)="fileEvent($event)" class="inputfile" id="imgInp" />
-                            <label style="max-width: 175px;" id="btn-upload-image" for="imgInp" class="ui yellow inverted button">
-                                <i class="ui upload icon"></i>
-                                Upload image
-                            </label>
-                        </div>
-                    </div>
-                </div>
-
-                <h4 class="ui dividing header">Donation Details</h4>
-                <div class="ui stackable two column grid">
-                    <div class="column">
+        
                         <div class="field">
-                            <label>Amount*</label>
-                            <input type="number" name="donationAmount" placeholder="Amount">
+                            <label class="section-header-label">Contact*</label>
+                            <div class="two fields">
+                                <div class="field">
+                                    <input type="text" name="donatorEmail" placeholder="Donator Email">
+                                </div>
+                                <div class="field">
+                                    <input type="text" name="donatorMobile" placeholder="Donator Mobile Phone">
+                                </div>
+                            </div>
                         </div>
-                        <div class="field">
-                            <label>Card Number*</label>
-                            <input type="text" name="cardNumber" maxlength="16" placeholder="Card #">
-                        </div>
-                        <div class="field">
-                            <label>CVC*</label>
-                            <input type="text" name="cardCVC" maxlength="3" placeholder="CVC">
-                        </div>
-                        <div class="field">
-                            <label>Expiration*</label>
+                        <div class="two fields">
                             <div class="field">
-                                <select class="ui fluid search dropdown" name="cardExpireMonth">
-                                    <option value="">Month</option>
-                                    <option value="1">January</option>
-                                    <option value="2">February</option>
-                                    <option value="3">March</option>
-                                    <option value="4">April</option>
-                                    <option value="5">May</option>
-                                    <option value="6">June</option>
-                                    <option value="7">July</option>
-                                    <option value="8">August</option>
-                                    <option value="9">September</option>
-                                    <option value="10">October</option>
-                                    <option value="11">November</option>
-                                    <option value="12">December</option>
+                                <select class="ui fluid search selection dropdown" name="donatorCountry">
+                                    <option value="">Select Country</option>
+                                    <option class="item" data-value="ax"><i class="ax flag"></i>Aland Islands</option>
+                                    <option class="item" data-value="al"><i class="al flag"></i>Albania</option>
+                                    <option class="item" data-value="dz"><i class="dz flag"></i>Algeria</option>
+                                    <option class="item" data-value="as"><i class="as flag"></i>American Samoa</option>
+                                    <option class="item" data-value="ad"><i class="ad flag"></i>Andorra</option>
+                                    <option class="item" data-value="ao"><i class="ao flag"></i>Angola</option>
+                                    <option class="item" data-value="ai"><i class="ai flag"></i>Anguilla</option>
+                                    <option class="item" data-value="ag"><i class="ag flag"></i>Antigua</option>
+                                    <option class="item" data-value="ar"><i class="ar flag"></i>Argentina</option>
+                                    <option class="item" data-value="am"><i class="am flag"></i>Armenia</option>
+                                    <option class="item" data-value="aw"><i class="aw flag"></i>Aruba</option>
+                                    <option class="item" data-value="au"><i class="au flag"></i>Australia</option>
+                                    <option class="item" data-value="at"><i class="at flag"></i>Austria</option>
+                                    <option class="item" data-value="az"><i class="az flag"></i>Azerbaijan</option>
+                                    <option class="item" data-value="bs"><i class="bs flag"></i>Bahamas</option>
+                                    <option class="item" data-value="bh"><i class="bh flag"></i>Bahrain</option>
+                                    <option class="item" data-value="bd"><i class="bd flag"></i>Bangladesh</option>
+                                    <option class="item" data-value="bb"><i class="bb flag"></i>Barbados</option>
+                                    <option class="item" data-value="by"><i class="by flag"></i>Belarus</option>
+                                    <option class="item" data-value="be"><i class="be flag"></i>Belgium</option>
+                                    <option class="item" data-value="bz"><i class="bz flag"></i>Belize</option>
+                                    <option class="item" data-value="bj"><i class="bj flag"></i>Benin</option>
+                                    <option class="item" data-value="bm"><i class="bm flag"></i>Bermuda</option>
+                                    <option class="item" data-value="bt"><i class="bt flag"></i>Bhutan</option>
+                                    <option class="item" data-value="bo"><i class="bo flag"></i>Bolivia</option>
+                                    <option class="item" data-value="ba"><i class="ba flag"></i>Bosnia</option>
+                                    <option class="item" data-value="bw"><i class="bw flag"></i>Botswana</option>
+                                    <option class="item" data-value="bv"><i class="bv flag"></i>Bouvet Island</option>
+                                    <option class="item" data-value="br"><i class="br flag"></i>Brazil</option>
+                                    <option class="item" data-value="vg"><i class="vg flag"></i>British Virgin Islands</option>
+                                    <option class="item" data-value="bn"><i class="bn flag"></i>Brunei</option>
+                                    <option class="item" data-value="bg"><i class="bg flag"></i>Bulgaria</option>
+                                    <option class="item" data-value="bf"><i class="bf flag"></i>Burkina Faso</option>
+                                    <option class="item" data-value="mm"><i class="mm flag"></i>Burma</option>
+                                    <option class="item" data-value="bi"><i class="bi flag"></i>Burundi</option>
+                                    <option class="item" data-value="tc"><i class="tc flag"></i>Caicos Islands</option>
+                                    <option class="item" data-value="kh"><i class="kh flag"></i>Cambodia</option>
+                                    <option class="item" data-value="cm"><i class="cm flag"></i>Cameroon</option>
+                                    <option class="item" data-value="ca"><i class="ca flag"></i>Canada</option>
+                                    <option class="item" data-value="cv"><i class="cv flag"></i>Cape Verde</option>
+                                    <option class="item" data-value="ky"><i class="ky flag"></i>Cayman Islands</option>
+                                    <option class="item" data-value="cf"><i class="cf flag"></i>Central African Republic</option>
+                                    <option class="item" data-value="td"><i class="td flag"></i>Chad</option>
+                                    <option class="item" data-value="cl"><i class="cl flag"></i>Chile</option>
+                                    <option class="item" data-value="cn"><i class="cn flag"></i>China</option>
+                                    <option class="item" data-value="cx"><i class="cx flag"></i>Christmas Island</option>
+                                    <option class="item" data-value="cc"><i class="cc flag"></i>Cocos Islands</option>
+                                    <option class="item" data-value="co"><i class="co flag"></i>Colombia</option>
+                                    <option class="item" data-value="km"><i class="km flag"></i>Comoros</option>
+                                    <option class="item" data-value="cg"><i class="cg flag"></i>Congo Brazzaville</option>
+                                    <option class="item" data-value="cd"><i class="cd flag"></i>Congo</option>
+                                    <option class="item" data-value="ck"><i class="ck flag"></i>Cook Islands</option>
+                                    <option class="item" data-value="cr"><i class="cr flag"></i>Costa Rica</option>
+                                    <option class="item" data-value="ci"><i class="ci flag"></i>Cote Divoire</option>
+                                    <option class="item" data-value="hr"><i class="hr flag"></i>Croatia</option>
+                                    <option class="item" data-value="cu"><i class="cu flag"></i>Cuba</option>
+                                    <option class="item" data-value="cy"><i class="cy flag"></i>Cyprus</option>
+                                    <option class="item" data-value="cz"><i class="cz flag"></i>Czech Republic</option>
+                                    <option class="item" data-value="dk"><i class="dk flag"></i>Denmark</option>
+                                    <option class="item" data-value="dj"><i class="dj flag"></i>Djibouti</option>
+                                    <option class="item" data-value="dm"><i class="dm flag"></i>Dominica</option>
+                                    <option class="item" data-value="do"><i class="do flag"></i>Dominican Republic</option>
+                                    <option class="item" data-value="ec"><i class="ec flag"></i>Ecuador</option>
+                                    <option class="item" data-value="eg"><i class="eg flag"></i>Egypt</option>
+                                    <option class="item" data-value="sv"><i class="sv flag"></i>El Salvador</option>
+                                    <option class="item" data-value="gb"><i class="gb flag"></i>England</option>
+                                    <option class="item" data-value="gq"><i class="gq flag"></i>Equatorial Guinea</option>
+                                    <option class="item" data-value="er"><i class="er flag"></i>Eritrea</option>
+                                    <option class="item" data-value="ee"><i class="ee flag"></i>Estonia</option>
+                                    <option class="item" data-value="et"><i class="et flag"></i>Ethiopia</option>
+                                    <option class="item" data-value="eu"><i class="eu flag"></i>European Union</option>
+                                    <option class="item" data-value="fk"><i class="fk flag"></i>Falkland Islands</option>
+                                    <option class="item" data-value="fo"><i class="fo flag"></i>Faroe Islands</option>
+                                    <option class="item" data-value="fj"><i class="fj flag"></i>Fiji</option>
+                                    <option class="item" data-value="fi"><i class="fi flag"></i>Finland</option>
+                                    <option class="item" data-value="fr"><i class="fr flag"></i>France</option>
+                                    <option class="item" data-value="gf"><i class="gf flag"></i>French Guiana</option>
+                                    <option class="item" data-value="pf"><i class="pf flag"></i>French Polynesia</option>
+                                    <option class="item" data-value="tf"><i class="tf flag"></i>French Territories</option>
+                                    <option class="item" data-value="ga"><i class="ga flag"></i>Gabon</option>
+                                    <option class="item" data-value="gm"><i class="gm flag"></i>Gambia</option>
+                                    <option class="item" data-value="ge"><i class="ge flag"></i>Georgia</option>
+                                    <option class="item" data-value="de"><i class="de flag"></i>Germany</option>
+                                    <option class="item" data-value="gh"><i class="gh flag"></i>Ghana</option>
+                                    <option class="item" data-value="gi"><i class="gi flag"></i>Gibraltar</option>
+                                    <option class="item" data-value="gr"><i class="gr flag"></i>Greece</option>
+                                    <option class="item" data-value="gl"><i class="gl flag"></i>Greenland</option>
+                                    <option class="item" data-value="gd"><i class="gd flag"></i>Grenada</option>
+                                    <option class="item" data-value="gp"><i class="gp flag"></i>Guadeloupe</option>
+                                    <option class="item" data-value="gu"><i class="gu flag"></i>Guam</option>
+                                    <option class="item" data-value="gt"><i class="gt flag"></i>Guatemala</option>
+                                    <option class="item" data-value="gw"><i class="gw flag"></i>Guinea-Bissau</option>
+                                    <option class="item" data-value="gn"><i class="gn flag"></i>Guinea</option>
+                                    <option class="item" data-value="gy"><i class="gy flag"></i>Guyana</option>
+                                    <option class="item" data-value="ht"><i class="ht flag"></i>Haiti</option>
+                                    <option class="item" data-value="hm"><i class="hm flag"></i>Heard Island</option>
+                                    <option class="item" data-value="hn"><i class="hn flag"></i>Honduras</option>
+                                    <option class="item" data-value="hk"><i class="hk flag"></i>Hong Kong</option>
+                                    <option class="item" data-value="hu"><i class="hu flag"></i>Hungary</option>
+                                    <option class="item" data-value="is"><i class="is flag"></i>Iceland</option>
+                                    <option class="item" data-value="in"><i class="in flag"></i>India</option>
+                                    <option class="item" data-value="io"><i class="io flag"></i>Indian Ocean Territory</option>
+                                    <option class="item" data-value="id"><i class="id flag"></i>Indonesia</option>
+                                    <option class="item" data-value="ir"><i class="ir flag"></i>Iran</option>
+                                    <option class="item" data-value="iq"><i class="iq flag"></i>Iraq</option>
+                                    <option class="item" data-value="ie"><i class="ie flag"></i>Ireland</option>
+                                    <option class="item" data-value="il"><i class="il flag"></i>Israel</option>
+                                    <option class="item" data-value="it"><i class="it flag"></i>Italy</option>
+                                    <option class="item" data-value="jm"><i class="jm flag"></i>Jamaica</option>
+                                    <option class="item" data-value="jp"><i class="jp flag"></i>Japan</option>
+                                    <option class="item" data-value="jo"><i class="jo flag"></i>Jordan</option>
+                                    <option class="item" data-value="kz"><i class="kz flag"></i>Kazakhstan</option>
+                                    <option class="item" data-value="ke"><i class="ke flag"></i>Kenya</option>
+                                    <option class="item" data-value="ki"><i class="ki flag"></i>Kiribati</option>
+                                    <option class="item" data-value="kw"><i class="kw flag"></i>Kuwait</option>
+                                    <option class="item" data-value="kg"><i class="kg flag"></i>Kyrgyzstan</option>
+                                    <option class="item" data-value="la"><i class="la flag"></i>Laos</option>
+                                    <option class="item" data-value="lv"><i class="lv flag"></i>Latvia</option>
+                                    <option class="item" data-value="lb"><i class="lb flag"></i>Lebanon</option>
+                                    <option class="item" data-value="ls"><i class="ls flag"></i>Lesotho</option>
+                                    <option class="item" data-value="lr"><i class="lr flag"></i>Liberia</option>
+                                    <option class="item" data-value="ly"><i class="ly flag"></i>Libya</option>
+                                    <option class="item" data-value="li"><i class="li flag"></i>Liechtenstein</option>
+                                    <option class="item" data-value="lt"><i class="lt flag"></i>Lithuania</option>
+                                    <option class="item" data-value="lu"><i class="lu flag"></i>Luxembourg</option>
+                                    <option class="item" data-value="mo"><i class="mo flag"></i>Macau</option>
+                                    <option class="item" data-value="mk"><i class="mk flag"></i>Macedonia</option>
+                                    <option class="item" data-value="mg"><i class="mg flag"></i>Madagascar</option>
+                                    <option class="item" data-value="mw"><i class="mw flag"></i>Malawi</option>
+                                    <option class="item" data-value="my"><i class="my flag"></i>Malaysia</option>
+                                    <option class="item" data-value="mv"><i class="mv flag"></i>Maloptiones</option>
+                                    <option class="item" data-value="ml"><i class="ml flag"></i>Mali</option>
+                                    <option class="item" data-value="mt"><i class="mt flag"></i>Malta</option>
+                                    <option class="item" data-value="mh"><i class="mh flag"></i>Marshall Islands</option>
+                                    <option class="item" data-value="mq"><i class="mq flag"></i>Martinique</option>
+                                    <option class="item" data-value="mr"><i class="mr flag"></i>Mauritania</option>
+                                    <option class="item" data-value="mu"><i class="mu flag"></i>Mauritius</option>
+                                    <option class="item" data-value="yt"><i class="yt flag"></i>Mayotte</option>
+                                    <option class="item" data-value="mx"><i class="mx flag"></i>Mexico</option>
+                                    <option class="item" data-value="fm"><i class="fm flag"></i>Micronesia</option>
+                                    <option class="item" data-value="md"><i class="md flag"></i>Moldova</option>
+                                    <option class="item" data-value="mc"><i class="mc flag"></i>Monaco</option>
+                                    <option class="item" data-value="mn"><i class="mn flag"></i>Mongolia</option>
+                                    <option class="item" data-value="me"><i class="me flag"></i>Montenegro</option>
+                                    <option class="item" data-value="ms"><i class="ms flag"></i>Montserrat</option>
+                                    <option class="item" data-value="ma"><i class="ma flag"></i>Morocco</option>
+                                    <option class="item" data-value="mz"><i class="mz flag"></i>Mozambique</option>
+                                    <option class="item" data-value="na"><i class="na flag"></i>Namibia</option>
+                                    <option class="item" data-value="nr"><i class="nr flag"></i>Nauru</option>
+                                    <option class="item" data-value="np"><i class="np flag"></i>Nepal</option>
+                                    <option class="item" data-value="an"><i class="an flag"></i>Netherlands Antilles</option>
+                                    <option class="item" data-value="nl"><i class="nl flag"></i>Netherlands</option>
+                                    <option class="item" data-value="nc"><i class="nc flag"></i>New Caledonia</option>
+                                    <option class="item" data-value="pg"><i class="pg flag"></i>New Guinea</option>
+                                    <option class="item" data-value="nz"><i class="nz flag"></i>New Zealand</option>
+                                    <option class="item" data-value="ni"><i class="ni flag"></i>Nicaragua</option>
+                                    <option class="item" data-value="ne"><i class="ne flag"></i>Niger</option>
+                                    <option class="item" data-value="ng"><i class="ng flag"></i>Nigeria</option>
+                                    <option class="item" data-value="nu"><i class="nu flag"></i>Niue</option>
+                                    <option class="item" data-value="nf"><i class="nf flag"></i>Norfolk Island</option>
+                                    <option class="item" data-value="kp"><i class="kp flag"></i>North Korea</option>
+                                    <option class="item" data-value="mp"><i class="mp flag"></i>Northern Mariana Islands</option>
+                                    <option class="item" data-value="no"><i class="no flag"></i>Norway</option>
+                                    <option class="item" data-value="om"><i class="om flag"></i>Oman</option>
+                                    <option class="item" data-value="pk"><i class="pk flag"></i>Pakistan</option>
+                                    <option class="item" data-value="pw"><i class="pw flag"></i>Palau</option>
+                                    <option class="item" data-value="ps"><i class="ps flag"></i>Palestine</option>
+                                    <option class="item" data-value="pa"><i class="pa flag"></i>Panama</option>
+                                    <option class="item" data-value="py"><i class="py flag"></i>Paraguay</option>
+                                    <option class="item" data-value="pe"><i class="pe flag"></i>Peru</option>
+                                    <option class="item" data-value="ph"><i class="ph flag"></i>Philippines</option>
+                                    <option class="item" data-value="pn"><i class="pn flag"></i>Pitcairn Islands</option>
+                                    <option class="item" data-value="pl"><i class="pl flag"></i>Poland</option>
+                                    <option class="item" data-value="pt"><i class="pt flag"></i>Portugal</option>
+                                    <option class="item" data-value="pr"><i class="pr flag"></i>Puerto Rico</option>
+                                    <option class="item" data-value="qa"><i class="qa flag"></i>Qatar</option>
+                                    <option class="item" data-value="re"><i class="re flag"></i>Reunion</option>
+                                    <option class="item" data-value="ro"><i class="ro flag"></i>Romania</option>
+                                    <option class="item" data-value="ru"><i class="ru flag"></i>Russia</option>
+                                    <option class="item" data-value="rw"><i class="rw flag"></i>Rwanda</option>
+                                    <option class="item" data-value="sh"><i class="sh flag"></i>Saint Helena</option>
+                                    <option class="item" data-value="kn"><i class="kn flag"></i>Saint Kitts and Nevis</option>
+                                    <option class="item" data-value="lc"><i class="lc flag"></i>Saint Lucia</option>
+                                    <option class="item" data-value="pm"><i class="pm flag"></i>Saint Pierre</option>
+                                    <option class="item" data-value="vc"><i class="vc flag"></i>Saint Vincent</option>
+                                    <option class="item" data-value="ws"><i class="ws flag"></i>Samoa</option>
+                                    <option class="item" data-value="sm"><i class="sm flag"></i>San Marino</option>
+                                    <option class="item" data-value="gs"><i class="gs flag"></i>Sandwich Islands</option>
+                                    <option class="item" data-value="st"><i class="st flag"></i>Sao Tome</option>
+                                    <option class="item" data-value="sa"><i class="sa flag"></i>Saudi Arabia</option>
+                                    <option class="item" data-value="sn"><i class="sn flag"></i>Senegal</option>
+                                    <option class="item" data-value="cs"><i class="cs flag"></i>Serbia</option>
+                                    <option class="item" data-value="rs"><i class="rs flag"></i>Serbia</option>
+                                    <option class="item" data-value="sc"><i class="sc flag"></i>Seychelles</option>
+                                    <option class="item" data-value="sl"><i class="sl flag"></i>Sierra Leone</option>
+                                    <option class="item" data-value="sg"><i class="sg flag"></i>Singapore</option>
+                                    <option class="item" data-value="sk"><i class="sk flag"></i>Slovakia</option>
+                                    <option class="item" data-value="si"><i class="si flag"></i>Slovenia</option>
+                                    <option class="item" data-value="sb"><i class="sb flag"></i>Solomon Islands</option>
+                                    <option class="item" data-value="so"><i class="so flag"></i>Somalia</option>
+                                    <option class="item" data-value="za"><i class="za flag"></i>South Africa</option>
+                                    <option class="item" data-value="kr"><i class="kr flag"></i>South Korea</option>
+                                    <option class="item" data-value="es"><i class="es flag"></i>Spain</option>
+                                    <option class="item" data-value="lk"><i class="lk flag"></i>Sri Lanka</option>
+                                    <option class="item" data-value="sd"><i class="sd flag"></i>Sudan</option>
+                                    <option class="item" data-value="sr"><i class="sr flag"></i>Suriname</option>
+                                    <option class="item" data-value="sj"><i class="sj flag"></i>Svalbard</option>
+                                    <option class="item" data-value="sz"><i class="sz flag"></i>Swaziland</option>
+                                    <option class="item" data-value="se"><i class="se flag"></i>Sweden</option>
+                                    <option class="item" data-value="ch"><i class="ch flag"></i>Switzerland</option>
+                                    <option class="item" data-value="sy"><i class="sy flag"></i>Syria</option>
+                                    <option class="item" data-value="tw"><i class="tw flag"></i>Taiwan</option>
+                                    <option class="item" data-value="tj"><i class="tj flag"></i>Tajikistan</option>
+                                    <option class="item" data-value="tz"><i class="tz flag"></i>Tanzania</option>
+                                    <option class="item" data-value="th"><i class="th flag"></i>Thailand</option>
+                                    <option class="item" data-value="tl"><i class="tl flag"></i>Timorleste</option>
+                                    <option class="item" data-value="tg"><i class="tg flag"></i>Togo</option>
+                                    <option class="item" data-value="tk"><i class="tk flag"></i>Tokelau</option>
+                                    <option class="item" data-value="to"><i class="to flag"></i>Tonga</option>
+                                    <option class="item" data-value="tt"><i class="tt flag"></i>Trinidad</option>
+                                    <option class="item" data-value="tn"><i class="tn flag"></i>Tunisia</option>
+                                    <option class="item" data-value="tr"><i class="tr flag"></i>Turkey</option>
+                                    <option class="item" data-value="tm"><i class="tm flag"></i>Turkmenistan</option>
+                                    <option class="item" data-value="tv"><i class="tv flag"></i>Tuvalu</option>
+                                    <option class="item" data-value="ug"><i class="ug flag"></i>Uganda</option>
+                                    <option class="item" data-value="ua"><i class="ua flag"></i>Ukraine</option>
+                                    <option class="item" data-value="ae"><i class="ae flag"></i>United Arab Emirates</option>
+                                    <option class="item" data-value="us"><i class="us flag"></i>United States</option>
+                                    <option class="item" data-value="uy"><i class="uy flag"></i>Uruguay</option>
+                                    <option class="item" data-value="um"><i class="um flag"></i>Us Minor Islands</option>
+                                    <option class="item" data-value="vi"><i class="vi flag"></i>Us Virgin Islands</option>
+                                    <option class="item" data-value="uz"><i class="uz flag"></i>Uzbekistan</option>
+                                    <option class="item" data-value="vu"><i class="vu flag"></i>Vanuatu</option>
+                                    <option class="item" data-value="va"><i class="va flag"></i>Vatican City</option>
+                                    <option class="item" data-value="ve"><i class="ve flag"></i>Venezuela</option>
+                                    <option class="item" data-value="vn"><i class="vn flag"></i>Vietnam</option>
+                                    <option class="item" data-value="wf"><i class="wf flag"></i>Wallis and Futuna</option>
+                                    <option class="item" data-value="eh"><i class="eh flag"></i>Western Sahara</option>
+                                    <option class="item" data-value="ye"><i class="ye flag"></i>Yemen</option>
+                                    <option class="item" data-value="zm"><i class="zm flag"></i>Zambia</option>
+                                    <option class="item" data-value="zw"><i class="zw flag"></i>Zimbabwe</option>
                                 </select>
                             </div>
                             <div class="field">
-                                <input type="text" name="cardExpireYear" maxlength="4" placeholder="Year">
+                                <input type="text" name="donatorPostcode" placeholder="Donator Post Code">
                             </div>
                         </div>
-                    </div>
-                    <div class="column">
-                        <div class="ui center aligned stacked segment">
-                            <label><strong>Payment Summary</strong></label>
-                            <table class="ui celled striped table">
-                                <thead>
-                                    <tr>
-                                        <th colspan="2">Stripe Payment</th>
-                                    </tr>
-                                </thead>
-                                <tbody>
-                                    <tr>
-                                        <td>Amount</td>
-                                        <td>1000.00</td>
-                                    </tr>
-                                    <tr>
-                                        <td>Stripe fees</td>
-                                        <td>18.32</td>
-                                    </tr>
-                                    <tr>
-                                        <td>Total Amount</td>
-                                        <td>1018.32</td>
-                                    </tr>
-                                </tbody>
-                            </table>
-                        </div>
-                        <div class="inline field">
-                            <div class="ui toggle checkbox">
-                                <input type="checkbox" tabindex="0" class="hidden">
-                                <label>Please add $2.5 a receipt to my donation</label>
+                    </fieldset>
+                    
+                    <fieldset class="fieldset">
+                        <legend class="legend">Recipient Details</legend>
+                        <div class="ui stackable two column grid">
+                            <div class="column">
+                                <label class="section-header-label"><strong>Name*</strong></label>
+                                <div class="field">
+                                    <input type="text" name="recipientFirstName" placeholder="Recipient First Name">
+                                </div>
+                                <div class="field">
+                                    <input type="text" name="recipientLastName" placeholder="Recipient Last Name">
+                                </div>
+                                <label class="section-header-label"><strong>Contact*</strong></label>
+                                <div class="field">
+                                    <input type="text" name="recipientEmail" placeholder="Recipient Email">
+                                </div>
+                                <div class="field">
+                                    <div class="ui disabled input">
+                                        <input type="text" name="recipientPostcode" placeholder="Post Code" value="3055">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="column center aligned">
+                                <label class="section-header-label">Image</label>
+                                <div class="field image-preview">
+                                    <img id="uploaded-image" src="http://placehold.it/180" alt="your image" />  
+                                </div>
+                                <div class="field btn-upload">
+                                    <input type="file" (change)="fileEvent($event)" class="inputfile" id="imgInp" />
+                                    <label style="max-width: 175px;" id="btn-upload-image" for="imgInp" class="ui yellow inverted button">
+                                        <i class="ui upload icon"></i>
+                                        Upload image
+                                    </label>
+                                </div>
                             </div>
                         </div>
+                    </fieldset>
+    
+                    <fieldset class="fieldset">
+                        <legend class="legend">Donation Details</legend>
+                        <div class="ui stackable two column grid">
+                            <div class="column">
+                                <div class="field">
+                                    <label class="section-header-label">Amount*</label>
+                                    <input type="number" name="donationAmount" placeholder="Amount">
+                                </div>
+                                <div class="field">
+                                    <label class="section-header-label">Card Name*</label>
+                                    <input type="text" name="cardName" placeholder="Card Name">
+                                </div>
+                                <div class="field">
+                                    <label class="section-header-label">Card Number*</label>
+                                    <input type="text" class="ccFormatMonitor" name="cardNumber" maxlength="16" placeholder="Card #">
+                                </div>
+                                
+                                <div class="ui stackable two column grid two fields">
+                                    <div class="field">
+                                        <label class="section-header-label">CVV*</label>
+                                        <input type="password" class="cvv" name="cardCVV" maxlength="3" placeholder="CVC">
+                                    </div>
+                                    <div class="field">
+                                        <label class="section-header-label">Expiration*</label>
+                                        <input type="text" id="inputExpDate" name="cardExpireYear" maxlength="7" placeholder="MM / YY">
+                                    </div>
+                                </div>
+    
+                            </div>
+                            <div class="column">
+                                <div id="payment-table-container" class="ui center aligned stacked segment">
+                                    <label><strong>Payment Summary</strong></label>
+                                    <table class="ui celled striped table">
+                                        <thead>
+                                            <tr>
+                                                <th colspan="2">Stripe Payment</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr>
+                                                <td>Amount</td>
+                                                <td>1000.00</td>
+                                            </tr>
+                                            <tr>
+                                                <td>Stripe fees</td>
+                                                <td>18.32</td>
+                                            </tr>
+                                            <tr>
+                                                <td>Total Amount</td>
+                                                <td class="total-amount">1018.32</td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                                <div class="inline field">
+                                    <div class="ui toggle checkbox">
+                                        <input type="checkbox" tabindex="0" class="hidden" id="check-add-amount">
+                                        <label>Please add $2.5 a receipt to my donation</label>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </fieldset>
+    
+                    <fieldset class="fieldset">
+                        <legend class="legend">Confirmation</legend>
+                        <label class="section-header-label">Well Wishes</label>
+                        <div class="field">
+                                <input type="text" name="wellWishes" placeholder="Please type your wishes...">
+                        </div>
+                        <div class="two fields">
+                            <div class="field">
+                                <div class="ui form">
+                                    <div class="grouped fields">
+                                        <div class="field">
+                                            <div class="ui radio checkbox" id="check-auto">
+                                                <input type="radio" name="example2">
+                                                <label>Autosend email now</label>
+                                            </div>
+                                        </div>
+                                        <div class="field">
+                                            <div class="ui radio checkbox" id="check-manual">
+                                                <input type="radio" name="example2">
+                                                <label>Manually send email later</label>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="field ui right aligned container pay-container">
+                                <div class="ui massive yellow submit inverted button" id="btn-pay">Pay Now</div>
+                            </div>
+                    </fieldset>                   
+                    
+                    <div class="ui error message">
+                        <ul class="list">
+                            <li>*Please fill all the required field before submitting the form</li>
+                            <!-- <li>You must agree to the terms and conditions</li> -->
+                        </ul>
                     </div>
-                </div>
+                    
+                    <!-- <div class="inline field">
+                        <div class="ui checkbox">
+                            <input type="checkbox" name="terms" tabindex="0" class="hidden">
+                            <label>I agree to the terms and conditions</label>
+                        </div>
+                    </div> -->
+                                        
+                    <select style="display:none;" id="monthSelect" name="dwfrm_billing_paymentMethods_creditCard_expiration_month">
+                        <option class="select-option" label="Month" value="" selected="selected">Month</option>
+                        <option class="select-option" label="01" value="1">01</option>
+                        <option class="select-option" label="02" value="2">02</option>
+                        <option class="select-option" label="03" value="3">03</option>
+                        <option class="select-option" label="04" value="4">04</option>
+                        <option class="select-option" label="05" value="5">05</option>
+                        <option class="select-option" label="06" value="6">06</option>
+                        <option class="select-option" label="07" value="7">07</option>
+                        <option class="select-option" label="08" value="8">08</option>
+                        <option class="select-option" label="09" value="9">09</option>
+                        <option class="select-option" label="10" value="10">10</option>
+                        <option class="select-option" label="11" value="11">11</option>
+                        <option class="select-option" label="12" value="12">12</option>
+                    </select>
+                    
+                    <select style="display:none;" class="input-select year required valid" id="yearSelect"
+                        name="dwfrm_billing_paymentMethods_creditCard_expiration_year" aria-required="true"
+                        aria-describedby="dwfrm_billing_paymentMethods_creditCard_expiration_year-error" aria-invalid="false">
+                        <option class="select-option" label="Year" value="" selected="selected">Year</option>
+                        <option class="select-option" label="2017" value="2017">2017</option>
+                        <option class="select-option" label="2018" value="2018">2018</option>
+                        <option class="select-option" label="2019" value="2019">2019</option>
+                        <option class="select-option" label="2020" value="2020">2020</option>
+                        <option class="select-option" label="2021" value="2021">2021</option>
+                        <option class="select-option" label="2022" value="2022">2022</option>
+                        <option class="select-option" label="2023" value="2023">2023</option>
+                        <option class="select-option" label="2024" value="2024">2024</option>
+                        <option class="select-option" label="2025" value="2025">2025</option>
+                        <option class="select-option" label="2026" value="2026">2026</option>
+                        <option class="select-option" label="2027" value="2027">2027</option>
+                    </select>
+                </form>
+            </div>
 
-                <h4 class="ui dividing header">Well Wishes</h4>
-                <div class="field">
-                    <div class="field">
-                        <input type="text" name="wellWishes" placeholder="Please type your wishes...">
-                    </div>
-                </div>
-                
-                <div class="two fields">
-                    <div class="field">
-                        <div class="ui form">
-                            <div class="grouped fields">
-                                <div class="field">
-                                    <div class="ui radio checkbox" id="check-auto">
-                                        <input type="radio" name="example2">
-                                        <label>Autosend email now</label>
-                                    </div>
-                                </div>
-                                <div class="field">
-                                    <div class="ui radio checkbox" id="check-manual">
-                                        <input type="radio" name="example2">
-                                        <label>Manually send email later</label>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="field ui right aligned container pay-container">
-                        <div class="ui massive yellow submit inverted button" id="btn-pay">Pay Now</div>
-                    </div>
-                    
-                    
-                </div>
-                <!-- <div class="inline field">
-                    <div class="ui checkbox">
-                        <input type="checkbox" name="terms" tabindex="0" class="hidden">
-                        <label>I agree to the terms and conditions</label>
-                    </div>
-                </div> -->
-                
-                <div class="ui error message">
-                    <ul class="list">
-                        <li>*Please fill all the required field before submitting the form</li>
-                        <!-- <li>You must agree to the terms and conditions</li> -->
-                    </ul>
-                </div>
-            </form>
-        </div>
 
         <script src="https://code.jquery.com/jquery-3.5.1.min.js"
             integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0=" crossorigin="anonymous"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.4.1/semantic.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/flickity/2.2.1/flickity.pkgd.min.js"></script>
         <script src="index.js" async defer></script>
     </body>
 </html>
