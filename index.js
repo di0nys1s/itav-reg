@@ -1,28 +1,193 @@
 $('.ui.dropdown').dropdown();
 $('.ui.checkbox').checkbox();
 
+// Form ui validations
 $('.ui.form')
     .form({
         fields: {
-            name: 'empty',
-            donatorFirstName: 'empty',
-            donatorLastName: 'empty',
-            donatorEmail: 'empty',
-            donatorMobile: 'empty',
-            donatorPostcode: 'empty',
-            donatorCountry: ['minCount[1]', 'empty'],
-            recipientFirstName: 'empty',
-            recipientLastName: 'empty',
-            recipientEmail: 'empty',
-            recipientPostcode: 'empty',
-            donationAmount: 'empty',
-            cardName: 'empty',
-            cardNumber: 'empty',
-            cardCVV: 'empty',
-            cardExpireYear: 'empty',
-            terms: 'checked'
+            firstname: {
+                identifier: 'FLD_first_name',
+                rules: [
+                    {
+                        type: 'empty',
+                        prompt: 'Please enter your first name'
+                    }
+                ]
+            },
+            lastname: {
+                identifier: 'FLD_last_name',
+                rules: [
+                    {
+                        type: 'empty',
+                        prompt: 'Please enter your last name'
+                    }
+                ]
+            },
+            email_empty: {
+                identifier: 'FLD_email',
+                rules: [
+                    {
+                        type: 'empty',
+                        prompt: 'Please enter your email address'
+                    }
+                ]
+            },
+            email_valid: {
+                identifier: 'FLD_email',
+                rules: [
+                    {
+                        type: 'email',
+                        prompt: 'Please enter a valid email address'
+                    }
+                ]
+            },
+            mobilephone: {
+                identifier: 'FLD_mobile_phone',
+                rules: [
+                    {
+                        type: 'empty',
+                        prompt: 'Please enter your mobile phone number'
+                    }
+                ]
+            },
+            postcode: {
+                identifier: 'FLD_post_code',
+                rules: [
+                    {
+                        type: 'empty',
+                        prompt: 'Please enter your post code'
+                    }
+                ]
+            },
+            country: {
+                identifier: 'FLD_country',
+                rules: [
+                    {
+                        type: 'empty',
+                        prompt: 'Please select a country'
+                    }
+                ]
+            },
+            v_firstname: {
+                identifier: 'FLD_v_first_name',
+                rules: [
+                    {
+                        type: 'empty',
+                        prompt: "Please enter recipient's first name"
+                    }
+                ]
+            },
+            v_lastname: {
+                identifier: 'FLD_v_last_name',
+                rules: [
+                    {
+                        type: 'empty',
+                        prompt: "Please enter recipient's last name"
+                    }
+                ]
+            },
+            v_email_empty: {
+                identifier: 'FLD_v_email',
+                rules: [
+                    {
+                        type: 'empty',
+                        prompt: "Please enter recipient's email address"
+                    }
+                ]
+            },
+            v_email_valid: {
+                identifier: 'FLD_v_email',
+                rules: [
+                    {
+                        type: 'email',
+                        prompt: "Please enter a valid recipient's email address"
+                    }
+                ]
+            },
+            v_postcode: {
+                identifier: 'FLD_v_post_code',
+                rules: [
+                    {
+                        type: 'empty',
+                        prompt: "Please enter a valid recipient's postcode"
+                    }
+                ]
+            },
+            v_amount: {
+                identifier: 'FLD_amount',
+                rules: [
+                    {
+                        type: 'empty',
+                        prompt: "Please enter donation amount"
+                    }
+                ]
+            },
+            cardname: {
+                identifier: 'FLD_card_name',
+                rules: [
+                    {
+                        type: 'empty',
+                        prompt: "Please enter your card name"
+                    }
+                ]
+            },
+            cardnumber: {
+                identifier: 'FLD_card_number',
+                rules: [
+                    {
+                        type: 'empty',
+                        prompt: "Please enter your card number"
+                    }
+                ]
+            },
+            cardnumber_valid: {
+                identifier: 'FLD_card_number',
+                rules: [
+                    {
+                        type: 'creditCard',
+                        prompt: "Please enter a valid credit card amount"
+                    }
+                ]
+            },
+            cvv: {
+                identifier: 'FLD_CVV',
+                rules: [
+                    {
+                        type: 'empty',
+                        prompt: "Please enter your card CVV"
+                    }
+                ]
+            },
+            expire: {
+                identifier: 'FLD_expire_year_month',
+                rules: [
+                    {
+                        type: 'empty',
+                        prompt: "Please enter your card expire month and year"
+                    }
+                ]
+            },
+            email_send: {
+                identifier: 'FLD_email_status',
+                rules: [
+                    {
+                        type: 'checked',
+                        prompt: "Please select your emailing choice"
+                    }
+                ]
+            },
+            terms: {
+                identifier: 'terms',
+                rules: [
+                    {
+                        type: 'checked',
+                        prompt: "Please approve our terms and conditions"
+                    }
+                ]
+            }
         }
     });
+
 
 function readURL(input) {
     if (input.files && input.files[0]) {
@@ -50,6 +215,7 @@ $("#check-manual").checkbox({
     }
 });
 
+// Add static amount to total amount
 let totalAmount = $('.total-amount').text();
 totalAmountNumber = parseFloat(totalAmount);
 console.log('totalAmountNumber', totalAmountNumber);

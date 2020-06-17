@@ -1,3 +1,10 @@
+:root {
+  --main-yellow: #fed11f;
+  --main-blue: #2f4190;
+  --main-white: #ffffff;
+  --main-pinklight: #feecdd;
+}
+
 #page-header {
 	margin-top: 50px;
 }
@@ -19,8 +26,15 @@
 	max-width: 175px;
 	max-height: auto;
 }
-#btn-upload-image:hover, #btn-pay:hover {
-	color: #fff;
+#btn-upload-image:hover, #btn-register:hover {
+	color: var(--main-white) !important;
+}
+#btn-upload-image {
+	color: var(--main-blue) !important;
+}
+#btn-register:hover {
+	background-color: var(--main-yellow) !important;
+	color: var(--main-white) !important;
 }
 .btn-upload {
 	display: flex;
@@ -35,23 +49,23 @@
   }
 }
 #page-header {
-	color: #2f4190;
+	color: var(--main-blue) !important;
 }
 .section-header-label {
-	color: #2f4190 !important;
+	color: var(--main-blue) !important;
     font-size: 18px !important;
 	font-weight: 600 !important;
 	margin-bottom: 1rem !important;
 }
 #form-inner {
-	background-color: #feecdd;
+	background-color: var(--main-pinklight) !important;
 	padding: 40px 20px;
 }
 .legend {
     color: white;
 	padding: 10px 20px;
 	box-sizing: border-box;
-	background-color: #2f4190;
+	background-color: var(--main-blue) !important;
 }
 .fieldset {
     padding-left: 20px;
@@ -66,13 +80,49 @@
     border-right-style: solid;
     border-bottom-style: solid;
     border-left-style: solid;
-    border-top-color: #2f4190;
-    border-right-color: #2f4190;
-    border-bottom-color: #2f4190;
-    border-left-color: #2f4190;
+    border-top-color: var(--main-blue) !important;
+    border-right-color: var(--main-blue) !important;
+    border-bottom-color: var(--main-blue) !important;
+    border-left-color: var(--main-blue) !important;
     margin-bottom: 50px;
 }
 #payment-table-container {
-	border: 2px solid #2f4190 !important;
+	border: 2px solid var(--main-blue) !important;;
 	border-radius: 0;
+}
+
+.ui.toggle.checkbox input:checked + label:before {
+    background-color: var(--main-yellow) !important;
+}
+
+.ui.toggle.checkbox input:checked ~ .box:before, .ui.toggle.checkbox input:checked ~ label:before {
+    background-color: var(--main-yellow) !important;
+}
+
+.ui.toggle.checkbox input:checked ~ .box:before, .ui.toggle.checkbox input:checked ~ label:before {
+    background-color: var(--main-yellow) !important;
+}
+
+.ui.toggle.checkbox input:focus:checked ~ .box:before, .ui.toggle.checkbox input:focus:checked ~ label:before {
+    background-color: var(--main-yellow) !important;
+}
+
+.ui.radio.checkbox input:focus:checked ~ label:after {
+    background-color: var(--main-yellow) !important;
+}
+.ui.radio.checkbox input:checked ~ label:after {
+    background-color: var(--main-yellow) !important;
+}
+.ui.radio.checkbox label:after {
+	background-color: var(--main-white);
+}
+input[type=radio]:checked ~ .check {
+	color: var(--main-yellow) !important;
+	background-color: var(--main-yellow) !important;
+}
+input[type=radio]:checked ~ .check::before{
+  	background-color: var(--main-yellow) !important;
+}
+input[type=radio]:checked ~ label{
+  	color: var(--main-yellow) !important;
 }
